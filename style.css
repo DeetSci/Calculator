@@ -1,0 +1,129 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: radial-gradient(rgba(45, 145, 106, 0.75),  rgb(0, 0, 0));
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(6, 80px);
+    border: 15px black;
+}
+
+.numbers {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(200, 200, 200, 0.75);
+    border-radius: 8px;
+}
+
+.translation {
+    transform: translateY(20px);
+}
+
+.delete {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(230, 27, 27, 0.75);
+    border-radius: 8px;
+}
+
+.operations {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(172, 200, 216, 0.75);
+    border-radius: 8px;
+}
+
+.calculator-grid > button:hover {
+    background-color: white;
+}
+
+.span-two-clear {
+    grid-column: span 2;
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgb(238, 238, 238);
+    border-radius: 8px;
+}
+
+.span-two-equals {
+    grid-column: span 2;
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(214, 101, 35, 0.75);
+    border-radius: 8px;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 8px;
+}
+
+.scientific {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(230, 245, 21, 0.75);
+    border-radius: 8px;
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.container {
+    background: grey;
+        margin: 0 auto;
+}  
+
+#footer {
+		position:fixed;
+	   	left:0px;
+	   	bottom:0px;
+	   	height:40px;
+	   	width:100%;
+		text-align: center;
+		margin: 0px auto;
+		padding: 10px;
+		color: #fff;
+}
+
+#footer a:link {
+    color: #fff;text-decoration: none;
+}
